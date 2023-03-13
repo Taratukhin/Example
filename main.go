@@ -23,7 +23,6 @@ type Price struct {
 
 func GetPrice(symbol string, ch chan map[int]Price) {
 	resp, err := http.Get("https://api.binance.com/api/v3/ticker/price?symbol=" + symbol)
-
 	if err != nil {
 		fmt.Printf("GetPrice: error to get %v\n", err)
 		return
